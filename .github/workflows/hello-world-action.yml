@@ -43,7 +43,7 @@ jobs:
 
     # Define the required approval for the environment before continuing
     permissions:
-      actions: Yes  # At least 1 approval is necessary before continuing.
+      actions:  # At least 1 approval is necessary before continuing.
 
   # Job 3: Deploy (This job runs after approval)
   deploy:
