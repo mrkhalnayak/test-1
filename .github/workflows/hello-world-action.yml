@@ -42,19 +42,19 @@ jobs:
       url: https://example.com  # Optional: Add a URL or related information for the environment.
 
     # Define the required approval for the environment before continuing
-    approvals:
-      required: 1  # At least 1 approval is required before continuing.
+    permissions:
+      actions: 1  # At least 1 approval is necessary before continuing.
 
   # Job 3: Deploy (This job runs after approval)
   deploy:
     runs-on: ubuntu-latest
-    needs: approval  # This job only runs if the approval job was successful.
+    needs: approval  # This job only runs if the approval job is successful.
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
       - name: Deploy to Production
-        run: echo "Deploying application to production..."
+        run: echo "Deploying an application to production..."
         # Add your actual deployment steps here.
 
